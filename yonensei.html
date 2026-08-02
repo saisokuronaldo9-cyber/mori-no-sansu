@@ -81,6 +81,7 @@ update=function(){
   const unlocked=baseComplete(),nature=save.activeWorld==="nature"&&unlocked;
   $("natureWorld").innerHTML=unlocked?"✨ しぜんの たに<small>3けた ×・÷ 1〜3けた</small>":"✨ しぜんの たに 🔒<small>ぜんいん そだてて かいほう</small>";
   if(nature)$("worldNote").textContent="3けた×1〜3けた・3けた÷1〜3けたに ちょうせん！";
+  $("total").textContent="そだち "+save.friends.reduce((a,b)=>a+b,0)+" / 18";
   $("natureTotal").textContent="そだち "+save.natureFriends.reduce((a,b)=>a+b,0)+" / 18";
 };
 update();
